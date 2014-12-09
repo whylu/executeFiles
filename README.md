@@ -3,7 +3,7 @@
 Installation:
 -------------
 downolad from git
-> git clone https://github.com/whylu/cronMs.git
+> git clone https://github.com/whylu/executeFiles.git
 
 
 Configuration:
