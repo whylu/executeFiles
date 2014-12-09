@@ -1,4 +1,11 @@
 
+
+Installation:
+-------------
+downolad from git
+> git clone https://github.com/whylu/cronMs.git
+
+
 Configuration:
 -------------
 Go to executeFiles folder
@@ -13,6 +20,7 @@ let executeFile.sh be executable
 Run:
 ----
 >./executeFile.sh
+
 
 Stop:
 ----
