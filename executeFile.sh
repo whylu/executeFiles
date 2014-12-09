@@ -49,7 +49,7 @@ function executeFile() {
   fileBasename=$(basename "$1")
   echo $fileBasename
   #move file to $running
-  cp $1 $running_path/$fileBasename
+  mv $1 $running_path/$fileBasename
   logInfo exe $1
 
   #change mode to executable and run
