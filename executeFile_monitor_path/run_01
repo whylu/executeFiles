@@ -1,0 +1,7 @@
+touch 01_a
+touch 01_b
+    while true;
+    do
+        sleep 2
+        echo $(date) >> timme
+    done
