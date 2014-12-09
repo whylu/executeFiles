@@ -56,14 +56,14 @@ function executeFile() {
   chmod +x $running_path/$fileBasename  
 
   #execute file
-  touch $running_pid_path/$BASHPID
+#  touch $running_pid_path/$BASHPID
   $running_path/$fileBasename & jobs+=($!)
-  touch $running_pid_path/$!
+#  touch $running_pid_path/$!
   wait
  
   #after finish, move file to $finish
-  rm -f $running_pid_path/$BASHPID
-  rm -f $running_pid_path/$!
+#  rm -f $running_pid_path/$BASHPID
+#  rm -f $running_pid_path/$!
   mv $running_path/$fileBasename $finish_path/$fileBasename
   logInfo finish $1
   
@@ -71,6 +71,7 @@ function executeFile() {
 
 #-- create threads to execute every file in parallel
 if [ "$(ls -A $monitor_path)" ]; then
+  touch $running_pid_path/$BASHPID
   jobs=()
   trap 'echo kill file theads ${jobs[@]} && ([ ${#jobs[@]} -eq 0 ] && exit) || kill ${jobs[@]}; exit' SIGTERM SIGINT SIGHUP
   for file in $monitor_path/*;
